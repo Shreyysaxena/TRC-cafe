@@ -90,7 +90,7 @@ code {
 @layer components {
   /* Typography */
   .font-serif {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
   }
 
   .section-padding {
