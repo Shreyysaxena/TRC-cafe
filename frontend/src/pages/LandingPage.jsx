@@ -262,10 +262,10 @@ const LandingPage = () => {
       <section id="order" className="section-padding bg-cafe-cream">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="section-title text-4xl md:text-5xl font-serif font-bold text-cafe-brown mb-4">
+            <h2 className="section-title text-3xl md:text-4xl font-bold text-cafe-brown mb-4">
               Order Online
             </h2>
-            <p className="text-lg text-cafe-brown/70">Fast, easy ordering from your favorite delivery apps</p>
+            <p className="text-base text-cafe-brown/70">Fast, easy ordering from your favorite delivery apps</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
