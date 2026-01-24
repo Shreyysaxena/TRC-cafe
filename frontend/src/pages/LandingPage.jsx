@@ -12,8 +12,8 @@ import {
   teamMembers,
   galleryImages,
   cafeInfo,
-  ownerStory
-} from '../mock';
+  ownerStory } from
+'../mock';
 
 const LandingPage = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -37,11 +37,11 @@ const LandingPage = () => {
     };
     reservations.push(newReservation);
     localStorage.setItem('reservations', JSON.stringify(reservations));
-    
+
     toast.success('Table Reserved Successfully!', {
       description: `We've reserved a table for ${reservationForm.guests} on ${reservationForm.date} at ${reservationForm.time}`
     });
-    
+
     setReservationForm({
       name: '',
       phone: '',
@@ -62,12 +62,12 @@ const LandingPage = () => {
   return (
     <div className="landing-page">
       {/* Header/Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 border-b border-cafe-brown/10">
+      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-cafe-brown/10 !bg-[#FFFFFF]">
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-cafe-brown rounded-lg flex items-center justify-center text-white font-bold text-lg">
-                R
+              <div className="w-10 h-10 flex items-center justify-center !font-bold !text-lg rounded-lg text-white bg-cafe-brown">TRC
+
               </div>
               <span className="font-serif text-xl font-bold text-cafe-brown">Ritu's Cafe</span>
             </div>
@@ -82,35 +82,35 @@ const LandingPage = () => {
             </div>
 
             {/* Mobile Menu Button */}
-            <button 
+            <button
               className="md:hidden text-cafe-brown"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+
               {mobileMenuOpen ? <X size={24} /> : <MenuIcon size={24} />}
             </button>
           </div>
 
           {/* Mobile Menu */}
-          {mobileMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 space-y-3">
+          {mobileMenuOpen &&
+          <div className="md:hidden mt-4 pb-4 space-y-3">
               <button onClick={() => scrollToSection('menu')} className="block w-full text-left py-2 text-cafe-brown">Menu</button>
               <button onClick={() => scrollToSection('story')} className="block w-full text-left py-2 text-cafe-brown">Our Story</button>
               <button onClick={() => scrollToSection('reserve')} className="block w-full text-left py-2 text-cafe-brown">Reserve</button>
               <button onClick={() => scrollToSection('contact')} className="block w-full text-left py-2 text-cafe-brown">Contact</button>
               <Button onClick={() => scrollToSection('order')} className="w-full bg-cafe-brown hover:bg-cafe-brown/90">Order Now</Button>
             </div>
-          )}
+          }
         </nav>
       </header>
 
       {/* Hero Section */}
       <section className="hero-section relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1521017432531-fbd92d768814" 
+          <img
+            src="https://images.unsplash.com/photo-1521017432531-fbd92d768814"
             alt="Cafe Interior"
-            className="w-full h-full object-cover"
-          />
+            className="w-full h-full object-cover" />
+
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
         </div>
         
@@ -123,19 +123,19 @@ const LandingPage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="default" 
+            <Button
+              size="default"
               onClick={() => scrollToSection('menu')}
-              className="cta-primary px-6 py-5"
-            >
+              className="inline-flex items-center justify-center whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-primary/90 h-9 cta-primary !font-medium !text-sm gap-2 px-6 py-5 rounded-md shadow text-primary-foreground !bg-[rgba(12,45,38,0.9)]">
+
               View Menu
             </Button>
-            <Button 
-              size="default" 
+            <Button
+              size="default"
               variant="outline"
               onClick={() => scrollToSection('reserve')}
-              className="cta-secondary px-6 py-5 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-cafe-brown"
-            >
+              className="cta-secondary px-6 py-5 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-cafe-brown">
+
               Reserve a Table
             </Button>
           </div>
@@ -164,11 +164,11 @@ const LandingPage = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="story-image-wrapper">
-              <img 
-                src={ownerStory.image} 
+              <img
+                src={ownerStory.image}
                 alt="Owner Ritu"
-                className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
-              />
+                className="rounded-2xl shadow-2xl w-full h-[500px] object-cover" />
+
             </div>
             <div className="story-content">
               <h2 className="section-title text-3xl md:text-4xl font-bold text-cafe-brown mb-6">
@@ -201,44 +201,44 @@ const LandingPage = () => {
             <Button
               variant={selectedCategory === 'coffee' ? 'default' : 'outline'}
               onClick={() => setSelectedCategory('coffee')}
-              className={selectedCategory === 'coffee' ? 'bg-cafe-brown hover:bg-cafe-brown/90' : ''}
-            >
+              className={selectedCategory === 'coffee' ? 'bg-cafe-brown hover:bg-cafe-brown/90' : ''}>
+
               Coffee & Beverages
             </Button>
             <Button
               variant={selectedCategory === 'breakfast' ? 'default' : 'outline'}
               onClick={() => setSelectedCategory('breakfast')}
-              className={selectedCategory === 'breakfast' ? 'bg-cafe-brown hover:bg-cafe-brown/90' : ''}
-            >
+              className={selectedCategory === 'breakfast' ? 'bg-cafe-brown hover:bg-cafe-brown/90' : ''}>
+
               Breakfast & Brunch
             </Button>
             <Button
               variant={selectedCategory === 'desserts' ? 'default' : 'outline'}
               onClick={() => setSelectedCategory('desserts')}
-              className={selectedCategory === 'desserts' ? 'bg-cafe-brown hover:bg-cafe-brown/90' : ''}
-            >
+              className={selectedCategory === 'desserts' ? 'bg-cafe-brown hover:bg-cafe-brown/90' : ''}>
+
               Snacks & Desserts
             </Button>
           </div>
 
           {/* Menu Items Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {menuItems[selectedCategory].map((item) => (
-              <Card key={item.id} className="menu-card overflow-hidden hover:shadow-xl transition-all duration-300">
-                {item.image && (
-                  <div className="relative h-48 overflow-hidden">
-                    <img 
-                      src={item.image} 
-                      alt={item.name}
-                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                    />
-                    {item.bestseller && (
-                      <Badge className="absolute top-4 right-4 bg-cafe-brown">
+            {menuItems[selectedCategory].map((item) =>
+            <Card key={item.id} className="menu-card overflow-hidden hover:shadow-xl transition-all duration-300">
+                {item.image &&
+              <div className="relative h-48 overflow-hidden">
+                    <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
+
+                    {item.bestseller &&
+                <Badge className="absolute top-4 right-4 bg-cafe-brown">
                         Bestseller
                       </Badge>
-                    )}
+                }
                   </div>
-                )}
+              }
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-cafe-brown mb-2">{item.name}</h3>
                   <p className="text-cafe-brown/70 mb-4">{item.description}</p>
@@ -247,7 +247,7 @@ const LandingPage = () => {
                   </div>
                 </CardContent>
               </Card>
-            ))}
+            )}
           </div>
 
           <div className="text-center mt-12">
@@ -314,58 +314,58 @@ const LandingPage = () => {
               <form onSubmit={handleReservation} className="space-y-6">
                 <div>
                   <label className="block text-cafe-brown font-medium mb-2">Name</label>
-                  <Input 
+                  <Input
                     required
                     value={reservationForm.name}
-                    onChange={(e) => setReservationForm({...reservationForm, name: e.target.value})}
+                    onChange={(e) => setReservationForm({ ...reservationForm, name: e.target.value })}
                     placeholder="Your name"
-                    className="border-cafe-brown/20"
-                  />
+                    className="border-cafe-brown/20" />
+
                 </div>
 
                 <div>
                   <label className="block text-cafe-brown font-medium mb-2">Phone Number</label>
-                  <Input 
+                  <Input
                     required
                     type="tel"
                     value={reservationForm.phone}
-                    onChange={(e) => setReservationForm({...reservationForm, phone: e.target.value})}
+                    onChange={(e) => setReservationForm({ ...reservationForm, phone: e.target.value })}
                     placeholder="+91 XXXXX XXXXX"
-                    className="border-cafe-brown/20"
-                  />
+                    className="border-cafe-brown/20" />
+
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-cafe-brown font-medium mb-2">Date</label>
-                    <Input 
+                    <Input
                       required
                       type="date"
                       value={reservationForm.date}
-                      onChange={(e) => setReservationForm({...reservationForm, date: e.target.value})}
-                      className="border-cafe-brown/20"
-                    />
+                      onChange={(e) => setReservationForm({ ...reservationForm, date: e.target.value })}
+                      className="border-cafe-brown/20" />
+
                   </div>
                   <div>
                     <label className="block text-cafe-brown font-medium mb-2">Time</label>
-                    <Input 
+                    <Input
                       required
                       type="time"
                       value={reservationForm.time}
-                      onChange={(e) => setReservationForm({...reservationForm, time: e.target.value})}
-                      className="border-cafe-brown/20"
-                    />
+                      onChange={(e) => setReservationForm({ ...reservationForm, time: e.target.value })}
+                      className="border-cafe-brown/20" />
+
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-cafe-brown font-medium mb-2">Number of Guests</label>
-                  <select 
+                  <select
                     required
                     value={reservationForm.guests}
-                    onChange={(e) => setReservationForm({...reservationForm, guests: e.target.value})}
-                    className="w-full px-3 py-2 border border-cafe-brown/20 rounded-md"
-                  >
+                    onChange={(e) => setReservationForm({ ...reservationForm, guests: e.target.value })}
+                    className="w-full px-3 py-2 border border-cafe-brown/20 rounded-md">
+
                     <option value="1">1 Guest</option>
                     <option value="2">2 Guests</option>
                     <option value="3">3 Guests</option>
@@ -395,20 +395,20 @@ const LandingPage = () => {
           </div>
 
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
-            {teamMembers.map((member) => (
-              <Card key={member.id} className="team-card text-center p-6 hover:shadow-xl transition-all duration-300">
+            {teamMembers.map((member) =>
+            <Card key={member.id} className="team-card text-center p-6 hover:shadow-xl transition-all duration-300">
                 <div className="relative w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
+                  <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover" />
+
                 </div>
                 <h3 className="text-lg font-bold text-cafe-brown mb-1">{member.name}</h3>
                 <p className="text-sm text-cafe-brown/70 font-medium mb-3">{member.role}</p>
                 <p className="text-xs text-cafe-brown/60">{member.bio}</p>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -424,15 +424,15 @@ const LandingPage = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {galleryImages.map((image) => (
-              <div key={image.id} className="gallery-item aspect-square overflow-hidden rounded-lg cursor-pointer hover:shadow-xl transition-all duration-300">
-                <img 
-                  src={image.url} 
-                  alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                />
+            {galleryImages.map((image) =>
+            <div key={image.id} className="gallery-item aspect-square overflow-hidden rounded-lg cursor-pointer hover:shadow-xl transition-all duration-300">
+                <img
+                src={image.url}
+                alt={image.alt}
+                className="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
+
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -448,12 +448,12 @@ const LandingPage = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {testimonials.map((testimonial) => (
-              <Card key={testimonial.id} className="testimonial-card p-6 hover:shadow-xl transition-all duration-300">
+            {testimonials.map((testimonial) =>
+            <Card key={testimonial.id} className="testimonial-card p-6 hover:shadow-xl transition-all duration-300">
                 <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
+                  {[...Array(testimonial.rating)].map((_, i) =>
+                <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                )}
                 </div>
                 <p className="text-cafe-brown/80 mb-4 italic">"{testimonial.text}"</p>
                 <div className="border-t border-cafe-brown/10 pt-4">
@@ -461,7 +461,7 @@ const LandingPage = () => {
                   <p className="text-sm text-cafe-brown/60">{testimonial.date}</p>
                 </div>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -486,8 +486,8 @@ const LandingPage = () => {
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
-                title="Cafe Location"
-              ></iframe>
+                title="Cafe Location">
+              </iframe>
             </div>
 
             {/* Contact Info */}
@@ -546,20 +546,20 @@ const LandingPage = () => {
               </Card>
 
               <div className="flex space-x-4">
-                <a 
-                  href={cafeInfo.social.instagram} 
-                  target="_blank" 
+                <a
+                  href={cafeInfo.social.instagram}
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white hover:shadow-lg transition-all duration-300"
-                >
+                  className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white hover:shadow-lg transition-all duration-300">
+
                   <Instagram size={24} />
                 </a>
-                <a 
-                  href={cafeInfo.social.whatsapp} 
-                  target="_blank" 
+                <a
+                  href={cafeInfo.social.whatsapp}
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white hover:shadow-lg transition-all duration-300"
-                >
+                  className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white hover:shadow-lg transition-all duration-300">
+
                   <Phone size={24} />
                 </a>
               </div>
@@ -622,8 +622,8 @@ const LandingPage = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 };
 
 export default LandingPage;
