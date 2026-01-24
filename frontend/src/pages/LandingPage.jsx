@@ -251,7 +251,7 @@ const LandingPage = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-cafe-brown hover:bg-cafe-brown/90">
+            <Button size="default" className="bg-cafe-brown hover:bg-cafe-brown/90">
               View Full Menu
             </Button>
           </div>
