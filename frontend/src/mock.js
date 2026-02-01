@@ -226,7 +226,7 @@ export const galleryImages = [
 export const cafeInfo = {
   name: "Ritu's Cafe by TRC",
   tagline: "Where Every Sip Feels Like Home",
-  address: "123, MG Road, Koramangala, Bangalore - 560034, Karnataka, India",
+  address: "45, CG Road, Navrangpura, Ahmedabad - 380009, Gujarat, India",
   phone: "+91-9876543210",
   email: "hello@rituscafe.com",
   hours: {
