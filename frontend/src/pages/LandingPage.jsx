@@ -125,7 +125,7 @@ const LandingPage = () => {
             Where Every Sip<br />Feels Like Home
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Experience the warmth of artisanal coffee and handcrafted delights at Bangalore's most beloved neighborhood cafe
+            Experience the warmth of artisanal coffee and handcrafted delights at Ahmedabad's most beloved neighborhood cafe
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
