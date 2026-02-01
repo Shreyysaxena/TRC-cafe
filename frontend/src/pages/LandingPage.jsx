@@ -107,11 +107,11 @@ const LandingPage = () => {
       <section className="hero-section relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1521017432531-fbd92d768814"
-            alt="Cafe Interior"
+            src="https://customer-assets.emergentagent.com/job_trc-cafe/artifacts/9zwrmquw_1.png"
+            alt="Ritu's Cafe Interior"
             className="w-full h-full object-cover" />
 
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
         </div>
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
