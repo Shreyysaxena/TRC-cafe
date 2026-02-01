@@ -106,23 +106,18 @@ const LandingPage = () => {
       {/* Hero Section */}
       <section className="hero-section relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-cafe-brown/20"></div>
-          <img
-            src="https://customer-assets.emergentagent.com/job_trc-cafe/artifacts/9zwrmquw_1.png"
+          <img 
+            src="https://customer-assets.emergentagent.com/job_trc-cafe/artifacts/d4wzgnbb_ChatGPT%20Image%20Feb%201%2C%202026%2C%2002_37_27%20PM.png" 
             alt="Ritu's Cafe Interior"
-            className="w-full h-full"
+            className="w-full h-full object-cover object-center"
             style={{
-              objectFit: 'cover',
-              objectPosition: 'center 40%',
-              imageRendering: 'crisp-edges',
+              imageRendering: 'auto',
               WebkitBackfaceVisibility: 'hidden',
               backfaceVisibility: 'hidden',
-              transform: 'translateZ(0) scale(1.05)',
-              filter: 'contrast(1.08) saturate(1.1) brightness(1.03) blur(0px)',
-              WebkitFontSmoothing: 'antialiased'
-            }} />
-
-          <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/50"></div>
+              transform: 'translateZ(0)'
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div>
         </div>
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
